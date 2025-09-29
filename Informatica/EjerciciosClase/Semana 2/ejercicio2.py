@@ -26,7 +26,7 @@ if 0 <= pegatinas :
 
     elif pegatinas > 1000 :
         precio = (88/100)*precio
-        print('Aplicando un 8% de descuento : ')
+        print('Aplicando un 12% de descuento : ')
 
     
     print(f"El precio de {pegatinas} pegatinas es de {precio:.2f} euros")
