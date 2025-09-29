@@ -7,16 +7,20 @@ numero = input("Introduce un número de 3 cifras : ")
 
 digits = []
 
-for num in numero :
-    digits.append(num)
-
-if len(digits) > 3:
-    print("Número inválido por ser mayor de 3 cifras")
+if int(numero) < 0 :
+    print("Números negativos no son válidos")
 
 else :
-    if digits[0] == digits[2]:
-        print("El número SÍ es capicúa")
+    for num in numero :
+        digits.append(num)
+
+    if len(digits) > 3:
+        print("Número inválido por ser mayor de 3 cifras")
+
     else :
-        print("El número NO es capicúa")
+        if digits[0] == digits[2]:
+            print("El número SÍ es capicúa")
+        else :
+            print("El número NO es capicúa")
 
 print("================================================= ")
