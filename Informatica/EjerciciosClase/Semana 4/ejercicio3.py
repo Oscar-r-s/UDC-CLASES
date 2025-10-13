@@ -29,12 +29,9 @@ while k<=0:
 # Pedir número real (x)
 x = float(input("Introduce un número real (x): "))
    
-
-# Calcular valores
 valor_real = math.cos(x)
 valor_aprox = cos_aproximado(x, k)
 
-# Mostrar resultados con 13 decimales
 print(f"El valor de cos({x:.6f}) real es {valor_real:.13f}, y el aproximado es {valor_aprox:.13f}.")
 print("=============================================")
 
