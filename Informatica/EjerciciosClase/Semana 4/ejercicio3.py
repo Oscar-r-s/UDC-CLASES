@@ -9,15 +9,16 @@
 
 import math
 
-# Función para calcular cos(x) usando su serie
+# Función para calcular cos(x)
 def cos_aproximado(x, k):
     aproximacion = 0
     for n in range(k):
+        #Fórmula dada en el anunciado para la aproximación
         termino = ((-1) ** n) * (x ** (2 * n)) / math.factorial(2 * n)
         aproximacion += termino
     return aproximacion
 
-# Pedir número entero mayor que 0
+# Pedir número entero mayor que 0 (k)
 k = int(input("Introduce un número entero mayor que 0 (k): "))
 
 #Control de errores
@@ -25,7 +26,7 @@ while k<=0:
     print("=============================================")
     k = int(input("Error en el rango. Introduce un número entero mayor que 0 (k): "))
 
-# Pedir número real
+# Pedir número real (x)
 x = float(input("Introduce un número real (x): "))
    
 
