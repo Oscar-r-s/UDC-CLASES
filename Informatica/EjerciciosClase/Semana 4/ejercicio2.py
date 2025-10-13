@@ -18,6 +18,6 @@ numeros = []
 #Imprimir el array por cada iteración / actualización del array números
 for i in range(1, n+1):
     numeros.append(i)
-    print(", ".join(str(x) for x in numeros))
+    print(" ".join(str(x) for x in numeros))
 
 print("============================================= ")
