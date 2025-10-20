@@ -22,20 +22,24 @@ def factorial(n):
 def combinaciones (kn,mn):
     return (factorial(mn)) / (factorial(kn) * factorial(mn-kn))
 
+def entrada_datos(): 
+    #Pedir k
+    k = int(input("Número k. Introduce un número mayor o igual que 1: "))
 
-#Pedir k
-k = int(input("Número k. Introduce un número mayor o igual que 1: "))
+    #Control de errores
+    while k<1 :
+        k = int(input("Error en el rango. Introduce un número k válido: "))
 
-#Control de errores
-while k<1 :
-    k = int(input("Error en el rango. Introduce un número k válido: "))
+    #Pedir n
+    n = int(input(f"Número n. Introduce un número mayor o igual {k}: "))
 
-#Pedir n
-n = int(input(f"Número n. Introduce un número mayor o igual {k}: "))
+    #Control de errores
+    while n<k :
+        n = int(input(f"Error en el rango. Introduce un número n válido, mayor que {k}: "))
 
-#Control de errores
-while n<k :
-    n = int(input(f"Error en el rango. Introduce un número n válido, mayor que {k}: "))
+    return n, k
+
+n,k = entrada_datos()
 
 #El número de combinaciones de n y k almacenado en una variable
 numero_combinaciones = combinaciones(k,n)
