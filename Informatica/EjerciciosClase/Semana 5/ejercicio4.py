@@ -11,6 +11,8 @@ de pares de primos gemelos son 5 y 7 ó 11 y 13
 lo es
 10
 """
+#Programa que no comento porque creo que se auto-explica con el nombre de las funciones
+
 def pedirMax():
     max = int(input("Introduce un número máximo positivo : "))
     return max
