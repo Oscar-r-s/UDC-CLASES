@@ -34,7 +34,7 @@ def primosGemelos(m):
 
 max = pedirMax()
 
-while max < 0 :
+while max <= 0 :
     max = pedirMax()
 
 primosGemelos(max)
