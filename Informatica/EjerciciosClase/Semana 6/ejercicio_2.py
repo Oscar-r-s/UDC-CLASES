@@ -63,22 +63,23 @@ def pedirOpcion():
 
 def ejecucion(eleccion):
     #Escoge la primera opción
-        if eleccion == 1 :
-            num = pedirNum_Mayor_Cero()
-            print(f"El factorial de {num} vale {factorial(num)}")
-            print("========================================================== ")
+    if eleccion == 1 :
+        num = pedirNum_Mayor_Cero()
+        print(f"El factorial de {num} vale {factorial(num)}")
+        print("========================================================== ")
 
-        #Escoge la segunda opción
-        elif eleccion == 2 :
-            num = pedirNum_Mayor_Cero()
-            print(f"El número {num} {esPrimo(num)}")
-            print("========================================================== ")
+    #Escoge la segunda opción
+    elif eleccion == 2 :
+        num = pedirNum_Mayor_Cero()
+        print(f"El número {num} {esPrimo(num)}")
+        print("========================================================== ")
 
-        #Escoge la tercera opción
-        elif eleccion == 3 :
-            num = pedirNum_Mayor_Cero()
-            print( f"El número {num} {es_numero_perfecto(num)}")
-            print("========================================================== ")
+    #Escoge la tercera opción
+    elif eleccion == 3 :
+        num = pedirNum_Mayor_Cero()
+        print( f"El número {num} {es_numero_perfecto(num)}")
+        print("========================================================== ")
+        
 
 
 
