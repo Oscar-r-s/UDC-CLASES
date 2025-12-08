@@ -71,6 +71,7 @@ pinta_ejes()
 """--- POSICIÓN FIJA DE LA CINTA ---"""
 # Copia de la cinta para no modificar el original
 cinta_copia = deepcopy(cinta)
+"""--- FIN POSICIÓN FIJA DE LA CINTA ---"""
 
 # Crear matriz de traslación
 T_cinta = numpy.identity(4)
@@ -157,6 +158,11 @@ Rx = rotate_y(numpy.radians(-90.0))  # rotación global
 Ry = numpy.identity(4)
 Rz = numpy.identity(4)
 n_steps = 100
+
+# La base permanece rotada a 90º
+R_base = rotate_y(ang_max)
+base_copia = deepcopy(base)
+base.transform(R_base)
 
 # Traslación y rotación inicial de la garra
 T_garra_local = numpy.identity(4)
@@ -261,6 +267,17 @@ for step in range(n_steps+1):
     paint([base_c,b1_c,b2_c,garra_c,lata_c])
 
 # Escena final en posición inicial
-paint([base_orig,b1_orig,b2_orig,garra_orig])
+R_final = rotate_y(numpy.radians(90))
 
+brazo1_copia.transform(R_final)
+brazo2_copia.transform(R_final)
+garra_copia.transform(R_final)
+lata_copia.transform(R_final)
+
+#Posición final de las piezas
+vpl.mesh_plot(base_copia, color=(20, 70, 90))
+vpl.mesh_plot(brazo1_copia, color=(90, 200, 200))
+vpl.mesh_plot(brazo2_copia, color=(235, 220, 200))
+vpl.mesh_plot(garra_copia, color=(50, 60, 70))
+vpl.mesh_plot(lata_copia, color=(230, 120, 110))
 vpl.show()
