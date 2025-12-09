@@ -53,8 +53,6 @@ def paint(maquina):
     for rgb in colores_piezas_diccionario.values():
         rgb_tuple = tuple(rgb)
         colores_piezas_lista_de_tuplas.append(rgb_tuple)
-
-    print(colores_piezas_lista_de_tuplas)
     # -----------------------------
     actores = []
     contador_color_lista_tuplas = 0
